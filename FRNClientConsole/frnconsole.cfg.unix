@@ -1,0 +1,189 @@
+
+################################################################################
+# Dane konta
+[Auth]
+Callsign=ZNAK
+OperatorName=OPERATOR
+EMailAddress=DZIALAJACY_MAIL
+City=MIASTO
+CityPart=DZIELNICA
+Password=HASLO
+Country=KRAJ
+Description=OPIS
+BandChannel=446,01111 CTCSS 131.8
+ClientType=GATEWAY
+CharsetName=WINDOWS-1250
+License=390
+
+################################################################################
+# Konfiguracja audio
+[Audio]
+InDevice=ALSA:USB Audio Device: USB Audio (hw:1,0)
+InSampleRate=44100
+InQuality=H
+InFactor=1
+InPreCapturedTime=100
+InAGCEnabled=no
+InAGCLevel=99
+InAGCMaxGain=20
+InHPFEnabled=no
+InHPFOrder=5
+InDTMFEnabled=no
+InDTMFSilenceThreshold=1000
+
+OutDevice=ALSA:USB Audio Device: USB Audio (hw:1,0)
+OutSampleRate=44100
+OutQuality=H
+OutFactor=1
+OutAGCEnabled=no
+OutAGCLevel=99
+OutAGCMaxGain=40
+OutHPFEnabled=no
+OutHPFOrder=5
+OutDelayConst=0
+
+
+################################################################################
+# Obsluga radia (aby korzystac z gpio, uruchom frn z prawami roota)
+[Radio]
+#### RS232-USB
+COS=VOX:750
+#### GPIO-SYSFS-
+PTT=GPIO:24:gpio24:INVERTED
+#LIGHT=
+CTCSSWakeTime=200
+CarrierCatchTime=100
+CarrierLostTime=500
+SquelchSettlingTime=
+SquelchSettlingTimeIn=
+DtmfCommands=
+DtmfTimeout=15
+
+
+################################################################################
+# Manager frn
+[Manager]
+ManagerAddress=sysman.freeradionetwork.eu
+ManagerPort=10025
+DynamicPasswordMode=YES
+
+
+
+################################################################################
+# Ustawienia serwewra
+[Server]
+ServerReconnectCount=3
+ServerReconnectInterval=3000
+ServerAddress=polska.freeradio.no-ip.pl
+ServerPort=10024
+CharsetName=WINDOWS-1250
+VisibleStatus=AV
+Network=Test
+BackupServerMode=Yes
+ForcedBackupServerAddress=polska-freeradionet.pl
+ForcedBackupServerPort=10024
+ForcedBackupServerNetwork=Test
+ProtoShortFrames=yes
+
+
+################################################################################
+# Ustawienia proxy
+[Internet]
+ProxyType=NONE
+ProxyAddress=192.168.1.1
+ProxyPort=3128
+CharsetName=UTF-8
+PreferIPv4=yes
+
+
+################################################################################
+# Automatyczna wiadomość bramki (kiedy ktos do nas napisze)
+[Message]
+PrivateAutoResponse=Twoja wiadomosc nie bedzie odczytana, lepiej wyslij maila...
+
+
+################################################################################
+# Ustawienia systemowe
+[System]
+WriteDir=
+CharsetName=UTF-8
+PidFile=
+LogFile=
+LogControlSound=Yes
+LogExternalSound=Yes
+LogClientList=Yes
+LogCarrier=Yes
+LogTiming=No
+LogBackupServerMode=Yes
+LogCheckServer=Yes
+LogDTMFTones=yes
+LogClientListDelimiter=;
+LogDtmfTones=yes
+LogDtmfCommands=yes
+DtmfCommands=
+GpioScheme=LINUX
+
+################################################################################
+# Dzwieki
+[Sounds]
+SoundsDir=
+SoundCourtesy=
+EnableCourtesy=
+SoundCourtesyEmptyNet=
+EnableCourtesyEmptyNet=
+SoundRoger=
+EnableRoger=no
+SoundNoConnection=
+EnableNoConnection=
+SoundReject=
+EnableReject=
+SoundError=
+EnableError=
+SoundRadioBOT=
+EnableRadioBOT=
+EnableConnect=yes
+SoundConnect=
+ConnectSoundCfgEnabled=no
+ConnectSoundCfgFileName=./connsounds.cfg
+ConnectSoundExtEnabled=no
+ConnectSoundExtScript=
+ConnectSoundExtDir=
+
+
+################################################################################
+# Odczytywanie godzin
+[Hours]
+Enabled=no
+Dir=
+Interval=60
+Correction=
+ExtEnabled=No
+ExtScript=
+ExtDir=
+ExtTempDir=
+
+
+################################################################################
+# Odczytywanie informacji
+[Informer]
+Enabled=no
+Dir=./informer
+Interval=1200
+Mode=SEQ
+SilenceEnabled=no
+SilenceInterval=300
+SilenceTime=2000
+ExtEnabled=No
+ExtScript=
+ExtDir=
+ExtTempDir=
+
+################################################################################
+# nagrywanie rozmow
+[Recorder]
+Enabled=No
+Dir=./recorder
+Direction=both
+FileNameFormat=long
+SubdirMode=y-m-d
+Script=
