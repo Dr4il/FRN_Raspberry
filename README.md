@@ -23,6 +23,9 @@ More in docs directory.
 2. Adjust config named `frnconsole.cfg.unix`
 3. Run FRNClientConsole :)
 
+### Configuration
+Detect sound cards `./FRNClientConsole.Linux-armv6.5000r audioconfig`
+
 #### Gpio setup
 If you want to use GPIO as relay steering, adjust 52 config line: `PTT=GPIO:24:gpio24:INVERTED` as you want to use. There is [pinout](https://pinout.xyz/) scheme with named pins.
 COS is runned automatically with VOX.
