@@ -4,10 +4,10 @@
 
 #### Features
 
-- [ ] standalone service
+- [x] standalone service
 - [ ] docs 
 - [ ] simple schematics
-- [ ] one line install script
+- [x] one line install script
 - [ ] docker image
 
 ### What is it?
