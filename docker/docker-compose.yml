@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  frn_client:
+    build: 
+      context: ../.
+      dockerfile: ./docker
+    environment:
+    - SERVER=USER
+    - USER=USER
+    - PASS=PASS
